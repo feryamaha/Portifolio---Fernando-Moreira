@@ -1,0 +1,260 @@
+/* criando barra de navegação */
+
+#inicio {
+    background: linear-gradient(135deg, #0d0d0d 51.04%, black 51.05%);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+ul {
+    list-style: none;
+    justify-content: center;
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+.iconLOG {
+    left: 2rem;
+    position: absolute;
+    top: 0.1rem;
+    height: 3.5rem;
+}
+
+nav {
+    width: 100%;
+    font-family: 'arial black';
+}
+
+a {
+    /*fonte barra suspensa */
+    text-decoration: none;
+    display: block;
+    color: #fff;
+    font-size: 20px;
+    transition: ease-in-out 0.3s;
+    text-shadow: 10px 15px 18px black;
+}
+
+a:hover {
+    /*hoer fonte barra suspensa*/
+    color: #00ff00;
+}
+
+.barra {
+    /*barra suspensa - menu de opções */
+    width: 100%;
+    height: auto;
+    background: black;
+    backdrop-filter: blur(20px);
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    border-bottom: solid 1px rgba(255, 255, 255, 0.452);
+}
+
+.barra-conteiner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
+    width: 100%;
+}
+
+.centralizador {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* barra de navegação terminada */
+
+/* criando início */
+.altura-ajuste {
+    width: 100%;
+}
+
+.ajustador {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.meu-nome {
+    /*meu nome apresentação inicial*/
+    font-size: 70px;
+    color: #03bb85;
+    text-shadow: 10px 15px 18px black;
+}
+
+.profile1 {
+    /*animação img profile1 pag. inicial*/
+    margin-top: -5%;
+    position: relative;
+    animation: desenhoAnimacao 5s infinite alternate-reverse linear;
+}
+
+.close-menu {
+    display: none;
+}
+
+.meu-nome::after {
+    content: '|';
+    margin-left: 5px;
+    opacity: 1;
+    animation: pisca .7s infinite;
+}
+
+/*estilização da apresentação inicial*/
+p.descrição {
+    font-family: 'Arial Narrow Bold';
+    font-size: 40px;
+    color: #eeedef;
+    text-shadow: 10px 15px 18px black;
+}
+
+/*estilização da apresentação inicial*/
+
+@keyframes desenhoAnimacao {
+    from {
+        top: -20px;
+    }
+
+    to {
+        top: 25px;
+    }
+}
+
+@keyframes pisca {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+}
+
+@media (max-width:1200px) {
+
+    #inicio {
+        background: #2a2a2a;
+        height: auto;
+    }
+
+    .ajustador {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: space-around;
+        align-items: center;
+        padding-bottom: 50px;
+    }
+
+    .desenho {
+        padding: 100px 0;
+    }
+
+    .apresentacao {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+@media (max-width:600px) {
+    .desenho {
+        padding: 20px 0;
+    }
+
+    /* configurando menu mobile */
+    .barra {
+        display: block;
+        position: fixed;
+        top: -100vh;
+        transition: ease 0.3s;
+    }
+
+    .close-menu-label::after {
+        content: '≡';
+        position: fixed;
+        z-index: 2;
+        top: 2rem;
+        right: 2rem;
+        background: red;
+        color: white;
+        font-size: 2rem;
+        line-height: 2rem;
+        width: 2rem;
+        height: 2rem;
+        text-align: center;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    /* ✕ */
+    .close-menu:checked~.barra {
+        top: 0;
+    }
+
+    .close-menu:checked~.close-menu-label::after {
+        display: block;
+        content: '✕';
+    }
+
+    .barra .barra-conteiner ul li a {
+        font-size: 20px;
+    }
+
+    .barra {
+        background: rgba(0, 0, 0, 0.527);
+    }
+}
+
+@media (max-width:600px) {
+    .meu-nome {
+        font-size: 28px;
+    }
+}
+
+@media (max-width:600px) {
+    p.descrição {
+        font-size: 18px;
+    }
+}
+
+@media (max-width:600px) {
+    a {
+        font-size: 10px;
+        display: flex;
+        gap: 0rem;
+    }
+}
+
+@media (max-width:600px) {
+    ul {
+        margin-left: -12.5%;
+        list-style: none;
+        display: flex;
+        width: 95%;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+}
+
+@media (max-width:600px) {
+    .ajustador {
+        margin-bottom: 220px;
+    }
+}
+
+@media (max-width:1024px) {
+    .iconLOG {
+        display: none;
+    }
+}

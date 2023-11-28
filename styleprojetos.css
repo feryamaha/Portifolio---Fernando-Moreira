@@ -1,0 +1,118 @@
+.projetos {
+    /*background: linear-gradient(225deg, #0d0d0d 51.04%, black 51.05%);*/
+    height: 100vh;
+}
+
+.container {
+    height: auto;
+    padding: 10%;
+    text-align: center;
+}
+
+
+.portfolio {
+    background-image: url(https://feryamaha.github.io/Projeto---Instagram/);
+    background-size: cover;
+}
+
+.projetos h2,
+.projetos a {
+    text-align: center;
+}
+
+.projetos h2 {
+    padding-bottom: 50px;
+    font-family: 'Arial black';
+    display: flex;
+    font-size: 30px;
+    justify-content: center;
+    color: #03bb85;
+    text-shadow: 2px 4px 5px black;
+}
+
+button {
+    padding: 10px 100px;
+    border-radius: 25px;
+    cursor: pointer;
+    color: #03bb85;
+    background-color: black;
+    border: none;
+    transition: ease-in-out 0.3s;
+}
+
+.projetos a {
+    display: inline;
+}
+
+.pro1 {
+    background: linear-gradient(205deg, rgba(0, 3, 3, 1) 0%, rgba(78, 83, 84, 0.9192051820728291) 66%);
+    height: 140px;
+    width: 200px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    overflow: hidden;
+    transition: ease-in-out 0.3s;
+    font-family: 'arial black';
+    font-size: 1rem;
+    color: #fff;
+    text-shadow: 1px 5px 8px #000;
+}
+
+.pro {
+    background-color: silver;
+    height: 140px;
+    width: 200px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    overflow: hidden;
+    transition: ease-in-out 0.3s;
+}
+
+.pro div p {
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 10px;
+    color: #C4C4C4;
+}
+
+.pro:hover {
+    letter-spacing: 6px;
+}
+
+/*
+.butonVermais:hover {
+    letter-spacing: 10px;
+}*/
+
+.pro div {
+    background-color: #2a2a2a;
+    width: 1000px;
+    text-align: center;
+    padding: 5% 0;
+    transform: rotate(-60deg);
+}
+
+.escondido {
+    opacity: 0;
+    display: none;
+    transition: 1000ms;
+}
+
+.projetos-itens {
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 80%;
+    justify-content: center;
+}
+
+@media (max-width:900px) {
+    .pro {
+        display: none;
+    }
+}

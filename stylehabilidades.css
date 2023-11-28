@@ -1,0 +1,104 @@
+.habilidades {
+    background: linear-gradient(35deg, #0d0d0d 51.04%, black 51.05%);
+    height: auto;
+}
+
+h2 {
+    margin: auto auto;
+    font-family: 'Arial black';
+    display: flex;
+    font-size: 25px;
+    justify-content: center;
+    color: #03bb85;
+    text-shadow: 2px 4px 5px black;
+}
+
+.habilidades-pd {
+    padding-top: -200px;
+    display: inline-block;
+    text-align: center;
+
+}
+
+.skills-descricao {
+    display: inline-block;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    padding-bottom: 20px;
+}
+
+.conteiner-skills {
+    width: 60%;
+    margin: 100px auto;
+    justify-content: space-between;
+    text-align: center;
+    flex-wrap: wrap;
+    display: block;
+
+}
+
+.skill-box {
+    /*logos das tecnologias*/
+    margin: 3% 3%;
+    display: inline-block;
+    align-items: center;
+    cursor: pointer;
+    transition: ease 1s;
+}
+
+.img-devclub {
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+}
+
+.icon-devclub {
+    width: 260px;
+    border-radius: 20px;
+}
+
+.icon-github {
+    width: 90px;
+    height: 90px;
+    border-radius: 30px;
+}
+
+.icon-node {
+    height: 100px;
+    width: 100px;
+
+}
+
+.conteiner-descricao {
+    /*texto descritivo das habilidades*/
+    margin-top: -10px;
+    display: block;
+    color: #dcdcdc;
+    font-family: 'Quando', serif;
+    text-align: center;
+}
+
+.skill-box:hover {
+    transform: rotate(-360deg);
+}
+
+.texto-descricao {
+    font-size: 25px;
+    width: 65%;
+    margin: auto auto;
+    line-height: 2rem;
+}
+
+@media (max-width:900px) {
+    .texto-descricao {
+        font-size: 20px;
+        width: 90%;
+        margin: auto auto;
+        line-height: 3rem;
+        text-align: justify;
+    }
+
+}
